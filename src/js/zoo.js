@@ -1,5 +1,6 @@
 (function() {
   'use strict';
+  window.zoo = window.zoo || {};
 
   console.log("I am in zoo");
 
