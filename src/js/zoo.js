@@ -2,19 +2,19 @@
   'use strict';
   window.zoo = window.zoo || {};
   window.zoo.Animal = Animal;
-  window.zoo.Animal = ArcticFox;
-  window.zoo.Animal = PolarBear;
+  window.zoo.ArcticFox= ArcticFox;
+  window.zoo.PolarBear = PolarBear;
 
 
-  console.log("I am in zoo");
+  // console.log("I am in zoo");
 
-  // Constructor function to create an Animal
   /**
-   * This constructor function create a new animal
-   * @param {name} name Name of the animal
-   * @param {dob} dob  date of birth of the animal
-   * @throws {TypeError} if name argument is an array
-   */
+  * This constructor function create a new animal
+  * @param {name} name Name of the animal
+  * @param {dob} dob  date of birth of the animal
+  * @throws {TypeError} if name is anything but a string
+  * @throws {TypeError} if no name is provided
+  */
   function Animal(name, dob){
     if (typeof(name) !== "string"){
       throw new TypeError("You must provide name argument in string format");
@@ -30,8 +30,21 @@
   };
 
 
-  // Constructor Function to create a Polar Bear which is species of Animal
+
+
+  /**
+   * Constructor Function to create a Polar Bear which is species of Animal
+   * @param {Name} name name to the new Polar Bear
+   * @param {dob} dob  dob of the new Polar Bear
+   *
+   */
   function PolarBear(name, dob) {
+    if (typeof(name) !== "string"){
+      throw new TypeError("You must provide name argument in string format");
+    }
+    else if (name === undefined) {
+      throw new TypeError("You must provide name and it must be in string format");
+    }
     Animal.apply( this, [name, dob] );
   }
   PolarBear.prototype = Object.create(Animal.prototype);
@@ -58,7 +71,6 @@
   // these two lines connect Arctic Fox to Animal
   ArcticFox.prototype = Object.create(Animal.prototype);
   ArcticFox.prototype.constructor = ArcticFox;
-
   ArcticFox.prototype.species = "Arctic Fox";
 
 
