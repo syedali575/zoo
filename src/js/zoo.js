@@ -11,12 +11,16 @@
   // Constructor function to create an Animal
   /**
    * This constructor function create a new animal
-   * @param {name} name [description]
-   * @param {[type]} dob  [description]
+   * @param {name} name Name of the animal
+   * @param {dob} dob  date of birth of the animal
+   * @throws {TypeError} if name argument is an array
    */
   function Animal(name, dob){
+    if (typeof(name) !== "string"){
+      throw new TypeError("You must provide name argument in string format");
+    }
     this.name = name || "Jimmy";
-    this.dob = dob || 20;
+    this.dob = dob || "April 13, 1937";
   }
   Animal.prototype.getAge = function getAge(){
     return 5;
