@@ -1,10 +1,19 @@
 (function() {
   'use strict';
   window.zoo = window.zoo || {};
+  window.zoo.Animal = Animal;
+  window.zoo.Animal = ArcticFox;
+  window.zoo.Animal = PolarBear;
+
 
   console.log("I am in zoo");
 
   // Constructor function to create an Animal
+  /**
+   * This constructor function create a new animal
+   * @param {name} name [description]
+   * @param {[type]} dob  [description]
+   */
   function Animal(name, dob){
     this.name = name || "Jimmy";
     this.dob = dob || 20;
@@ -17,10 +26,10 @@
   // Constructor Function to create a Polar Bear which is species of Animal
   function PolarBear(name, dob) {
     Animal.apply( this, [name, dob] );
-    this.species = "Polar Bear";
   }
   PolarBear.prototype = Object.create(Animal.prototype);
   PolarBear.prototype.constructor = PolarBear;
+  PolarBear.prototype.species = "Polar Bear";
 
   var swimmer = new PolarBear("Matt", "Jan 1, 2014");
 
@@ -36,11 +45,14 @@
 
   // Constructor Function to create a Arctic Fox which is species of Animal
   function ArcticFox(name, dob) {
+    // Apply Animak function on "Arctic Fox", so it has Animal attributes;
     Animal.apply( this, [name, dob] );
-    this.species = "Arctic Fox";
   }
+  // these two lines connect Arctic Fox to Animal
   ArcticFox.prototype = Object.create(Animal.prototype);
   ArcticFox.prototype.constructor = ArcticFox;
+
+  ArcticFox.prototype.species = "Arctic Fox";
 
 
 
