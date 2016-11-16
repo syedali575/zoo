@@ -19,6 +19,9 @@
     if (typeof(name) !== "string"){
       throw new TypeError("You must provide name argument in string format");
     }
+    else if (name === undefined) {
+      throw new TypeError("You must provide name and it must be in string format");
+    }
     this.name = name || "Jimmy";
     this.dob = dob || "April 13, 1937";
   }
