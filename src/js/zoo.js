@@ -45,7 +45,7 @@
 
   var momFox = new ArcticFox("Jamie", "June 15, 2010");
 
-  // Method to give birth
+  // Method to give birth for Arctic Fox
   ArcticFox.prototype.giveBirth = function giveBirth(){
     return new ArcticFox("Joey", "Nov 15, 2016");
   };
@@ -53,7 +53,7 @@
   console.log(momFox.giveBirth());
 
 
-  var fastFox = new ArcticFox("Flash", "Jan 1, 2012")
+  var fastFox = new ArcticFox("Flash", "Jan 1, 2012");
 
   //Method to calculate running speed of Arctic Fox
 
@@ -64,14 +64,6 @@
 
 
   console.log("Speed per mile", fastFox.getSpeed(5));
-
-
-
-
-
-
-
-
 
 
 

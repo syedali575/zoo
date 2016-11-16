@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Harness</title>
+
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" type="text/css">
+  </head>
+
+
+
+  <body>
+
+    <div id="mocha"></div>
+
+
+<!-- Libraries -->
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/chai/chai.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
+<!-- Mocha Setup -->
+<script>
+mocha.setup("bdd");
+</script>
+
+
+<!-- Source -->
+<script src="../src/js/zoo.js"></script>
+
+
+
+<!-- Run mocha -->
+<script>
+mocha.run();
+</script>
+
+
+
+  </body>
+</html>

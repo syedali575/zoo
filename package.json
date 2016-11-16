@@ -1,0 +1,29 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "Working on Zoo Project to learn methods and prototypes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedali575/zoo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedali575/zoo/issues"
+  },
+  "homepage": "https://github.com/syedali575/zoo#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
