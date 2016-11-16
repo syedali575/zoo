@@ -10,7 +10,7 @@
     it("confirming namespace window.zoo exist", function(){
       expect(window.zoo).to.be.a("object");
     });
-
+    
 
 
 
@@ -20,5 +20,5 @@
 
 
   });
-//End of iife
+  //End of iife
 }());
